@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <title>
+      Viewer Example
+    </title>
+    <link type="text/css" rel="stylesheet" href="./assets/css/reset.css">
+    <link type="text/css" rel="stylesheet" href="./assets/css/viewer.css">
+    <script type='text/javascript' src="./node_modules/jquery/dist/jquery.js"></script>
+    <script type='text/javascript' src="./node_modules/gsap/src/uncompressed/TweenMax.js"></script>
+    <script type='text/javascript' src="./assets/js/viewer.js"></script>
+    <script>
+      $(function() {
+        var background = new Viewer({
+          element: 'body',
+          file: 'assets/data/images.json',
+          directory: 'assets/images/background/',
+          classPrefix: 'background-',
+          visualDuration: 1,
+          shiftDelay: 2,
+          cssBackground: true,
+          flip: false,
+          controls: false,
+          callback: function(viewer, data){
+            background.start();
+          }.bind(this)
+        });
+        var viewer = new Viewer({
+          element: 'body',
+          file: 'assets/data/images.json',
+          // 'data': [
+          //   {"file": "dragonfly.jpg"},
+          //   {"file": "lighthouse.jpg"},
+          //   {"file": "tree.jpg"}
+          // ],
+          directory: 'assets/images/viewer/',
+          classPrefix: 'viewer-',
+          userInterface: true,
+          resizeContainer: true,
+          visualDuration: 0.3,
+          resizeDuration: 0.3,
+          shiftDelay: 0.3,
+          verticalOffset: 60,
+          horizontalOffset: 60,
+          flip: true,
+          controls: true,
+          callback: function(viewer, data){
+            viewer.show();
+          }.bind(this)
+        });
+      });
+    </script>
+  </head>
+  <body></body>
+</html>

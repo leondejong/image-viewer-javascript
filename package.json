@@ -1,0 +1,29 @@
+{
+  "name": "javascript-viewer",
+  "version": "0.0.1",
+  "description": "Image Viewer in Javascript",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/leondejong/javascript-viewer.git"
+  },
+  "keywords": [
+    "javascript",
+    "viewer",
+    "gallery",
+    "images"
+  ],
+  "author": "Léon de Jong",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/leondejong/javascript-viewer/issues"
+  },
+  "homepage": "https://github.com/leondejong/javascript-viewer#readme",
+  "dependencies": {
+    "gsap": "^1.18.2",
+    "jquery": "^1.11.0"
+  }
+}
